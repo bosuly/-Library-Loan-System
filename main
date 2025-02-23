@@ -1,0 +1,49 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package library.loan;
+
+/**
+ *
+ * @author USER
+ */
+public class LibraryLoan {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        library library = new library();
+       library library2 = new library();
+
+        
+        book books1 = new book("harry potter", "ulysses ", 15);
+        book books2 = new book("The Lord of the Rings", "james", 13);
+        book books3 = new book("The Da Vinci Code ", "daryl", 14);
+        book books4 = new book("The Twilight Saga", "rod", 18);
+         
+        library.addbook(books1);
+        library.addbook(books2);
+        library.addbook(books3);
+        library2.addbook(books4);
+        
+     
+        
+        System.out.println("Library inventory before loan:");
+        library.displayLibrary();
+        
+        System.out.println("\nLoaning 2 copies of 'The Lord of the Rings' ");
+        library.loanbook(books2, 2);
+        
+        System.out.println("\n loaning 5 copies of harry potter");
+        library.loanbook(books1, 5);
+  
+         library.addnewbooks(books4, library2);
+         
+        System.out.println("\nLibrary Inventory After Loan:");
+        library.displayLibrary();
+        library2.displayLibrary();
+    }
+    
+}
