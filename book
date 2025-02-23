@@ -1,0 +1,44 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package library.loan;
+
+/**
+ *
+ * @author USER
+ */
+public class book {
+      private String title;
+      private String author;
+      private int copies;
+
+    
+    public book(String title, String author,int copies ) {
+        this.title= title;
+        this.author=author;
+        this.copies=copies;
+    }
+
+    
+    public void displayinfo() {
+        System.out.println("BOOK TITLE: " + title + ", BOOK AUTHOR: " + author + ", BOOK COPIES: "+ copies);
+    }
+     public void decrementCopies(int count) {
+        if (copies >= count) {
+            int m =copies -= count;
+        } else {
+            System.out.println("Not enough copies : " + title);
+        }
+    }
+    public String gettitle(){
+        return title;
+    }
+     public String author(){
+        return author;
+    }  public int copies(){
+        return copies;
+    } 
+  
+
+}
