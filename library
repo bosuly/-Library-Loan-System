@@ -1,0 +1,47 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package library.loan;
+import java.util.ArrayList;
+import java.util.List;
+/**
+ *
+ * @author USER
+ */
+public class library {
+    private String newbook;
+     private ArrayList<book> books;
+
+    public library() {
+        this.newbook=newbook;
+        this.books = new ArrayList<>();
+    }
+
+    public void addbook(book book) {
+        books.add(book);
+    }
+    public void addbooks(book add) {
+        books.add(add);
+    }
+
+    public void loanbook(book book, int loanCount) {
+        book.decrementCopies(loanCount);
+    }
+
+    public void displayLibrary() {
+        for (book book : books) {
+            book.displayinfo();
+        }
+    }
+     public void addnewbooks(book add, library newbookss) {
+        if (books.contains(add)) {
+ 
+            newbookss.addbook(add);
+            System.out.println("books not found" + this.newbook);
+        } else {
+          
+              System.out.println("add new books: "+ " TITLE: "+ add.gettitle()+", AUTHOR: "+add.author()+", COPIES: "+ add.copies()+" ADD BOOKS TO LIBRARY");
+        }
+    }
+}
